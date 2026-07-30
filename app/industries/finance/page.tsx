@@ -31,6 +31,29 @@ const services = [
   },
 ]
 
+const systems = [
+  {
+    name: "Core Banking & Microfinance Management System",
+    description: "Manage customer accounts, savings groups, loans, and daily transactions for banks, SACCOs, and microfinance institutions."
+  },
+  {
+    name: "Mobile Money Integration Platform",
+    description: "Connect with m-GURUSH, MTN MoMo, and other regional mobile money providers for deposits, withdrawals, and merchant payments."
+  },
+  {
+    name: "Loan Origination & Credit Scoring System",
+    description: "Digitize loan applications, automate credit assessments, and track repayment schedules for lenders and SACCOs."
+  },
+  {
+    name: "Digital Wallet & Remittance Platform",
+    description: "A secure platform for domestic and diaspora remittances with real-time transaction tracking and notifications."
+  },
+  {
+    name: "Regulatory Reporting & Compliance Dashboard",
+    description: "Automated generation of reports for the Bank of South Sudan and other regulatory bodies, reducing manual compliance work."
+  },
+]
+
 const benefits = [
   "PCI-DSS compliant solutions",
   "Bank-grade security standards",
@@ -88,8 +111,30 @@ export default function FinancePage() {
         </div>
       </section>
 
-      {/* Security & Compliance */}
+      {/* Systems Section */}
       <section className="py-16 lg:py-24 bg-secondary">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-primary font-medium text-sm uppercase tracking-wider mb-2">Systems We Build</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Finance-Specific Systems</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Purpose-built platforms for how banks, lenders, and fintechs actually move money.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {systems.map((system, index) => (
+              <div key={index} className="bg-card rounded-xl p-6 border border-border/50">
+                <h3 className="text-xl font-semibold text-foreground mb-2">{system.name}</h3>
+                <p className="text-muted-foreground">{system.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Security & Compliance */}
+      <section className="py-16 lg:py-24 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>

@@ -43,6 +43,29 @@ const solutions = [
   },
 ]
 
+const systems = [
+  {
+    name: "University & Campus Management System (UMS)",
+    description: "An all-in-one administrative platform to manage academic departments, course scheduling, faculty management, facility allocation, and degree auditing."
+  },
+  {
+    name: "Student Information & Registration System (SIS)",
+    description: "A centralized system for student admissions, digital enrollment, academic transcript generation, attendance tracking, and grading records."
+  },
+  {
+    name: "Tuition & Fee Collection Portal",
+    description: "A secure portal integrated with local mobile money (e.g., m-GURUSH) and banks for tracking tuition payments, generating digital receipts, and managing financial aid."
+  },
+  {
+    name: "Offline-Capable E-Learning & LMS",
+    description: "A Learning Management System optimized for low-bandwidth environments, allowing students and instructors to download course materials, submit assignments, and participate in offline discussions."
+  },
+  {
+    name: "National Primary & Secondary School Registry",
+    description: "A foundational system designed for educational boards and ministries to centralize national exam registration, school accreditation, and teacher credentialing."
+  },
+]
+
 const benefits = [
   "Improved student engagement",
   "Streamlined administrative processes",
@@ -93,8 +116,30 @@ export default function EducationPage() {
         </div>
       </section>
 
-      {/* Solutions Section */}
+      {/* Systems Section */}
       <section className="py-16 lg:py-24 bg-secondary">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-primary font-medium text-sm uppercase tracking-wider mb-2">Systems We Build</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Education-Specific Systems</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Purpose-built software designed around how schools, universities, and ministries actually operate.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {systems.map((system, index) => (
+              <div key={index} className="bg-card rounded-xl p-6 border border-border/50">
+                <h3 className="text-xl font-semibold text-foreground mb-2">{system.name}</h3>
+                <p className="text-muted-foreground">{system.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Solutions Section */}
+      <section className="py-16 lg:py-24 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-primary font-medium text-sm uppercase tracking-wider mb-2">Our Solutions</p>
@@ -116,7 +161,7 @@ export default function EducationPage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 lg:py-24 bg-background">
+      <section className="py-16 lg:py-24 bg-secondary">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>

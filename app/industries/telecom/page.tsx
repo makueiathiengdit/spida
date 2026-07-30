@@ -46,6 +46,29 @@ const vasServices = [
   { title: "Ringback Tones", description: "Customizable caller tunes for subscribers" },
 ]
 
+const systems = [
+  {
+    name: "Subscriber Billing & Charging System",
+    description: "A prepaid/postpaid billing engine for mobile and internet service providers, handling rating, invoicing, and payment collection."
+  },
+  {
+    name: "USSD & VAS Platform",
+    description: "Build and manage value-added services - missed call alerts, call-me-back, USSD menus - that work on any handset without internet."
+  },
+  {
+    name: "Network Operations & Monitoring Dashboard",
+    description: "Real-time visibility into network uptime, outages, and performance across regions to speed up incident response."
+  },
+  {
+    name: "Content Delivery & Streaming Platform",
+    description: "Manage and distribute digital media and broadcast content to subscribers across varying network conditions."
+  },
+  {
+    name: "SMS & Bulk Messaging Gateway",
+    description: "An enterprise messaging platform for notifications, marketing campaigns, and public alerts at scale."
+  },
+]
+
 const benefits = [
   "Reduce network downtime",
   "Increase subscriber satisfaction",
@@ -96,8 +119,30 @@ export default function TelecomMediaPage() {
         </div>
       </section>
 
-      {/* VAS Services Section */}
+      {/* Systems Section */}
       <section className="py-16 lg:py-24 bg-secondary">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-primary font-medium text-sm uppercase tracking-wider mb-2">Systems We Build</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Telecom-Specific Systems</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Purpose-built software designed around how operators and media companies actually run networks.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {systems.map((system, index) => (
+              <div key={index} className="bg-card rounded-xl p-6 border border-border/50">
+                <h3 className="text-xl font-semibold text-foreground mb-2">{system.name}</h3>
+                <p className="text-muted-foreground">{system.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* VAS Services Section */}
+      <section className="py-16 lg:py-24 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-primary font-medium text-sm uppercase tracking-wider mb-2">Value Added Services</p>
@@ -119,7 +164,7 @@ export default function TelecomMediaPage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 lg:py-24 bg-background">
+      <section className="py-16 lg:py-24 bg-secondary">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>

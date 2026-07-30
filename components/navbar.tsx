@@ -21,6 +21,8 @@ import {
   ShoppingCart,
   Radio,
   Building2,
+  Stethoscope,
+  Network,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { LucideIcon } from "lucide-react";
@@ -31,6 +33,7 @@ type MenuItem = {
   href: string;
   description: string;
   icon: LucideIcon;
+  image: string;
 };
 
 const services: MenuItem[] = [
@@ -40,6 +43,7 @@ const services: MenuItem[] = [
     description:
       "Responsive, high-performance websites and web apps built to convert.",
     icon: Globe,
+    image: "/images/hero/web-design.png",
   },
   {
     name: "Custom Software Development",
@@ -47,6 +51,7 @@ const services: MenuItem[] = [
     description:
       "Tailored applications engineered around your unique business logic.",
     icon: Code2,
+    image: "/images/hero/custom-software.png",
   },
   {
     name: "API & Integrations",
@@ -54,6 +59,7 @@ const services: MenuItem[] = [
     description:
       "Connect your systems with secure, scalable APIs and integrations.",
     icon: Plug,
+    image: "/images/hero/api-integrations.png",
   },
   {
     name: "Data Analytics",
@@ -61,6 +67,7 @@ const services: MenuItem[] = [
     description:
       "Turn raw data into dashboards and insights that drive decisions.",
     icon: BarChart3,
+    image: "/images/hero/data-analytics.png",
   },
   {
     name: "Web Hosting",
@@ -68,6 +75,15 @@ const services: MenuItem[] = [
     description:
       "Reliable managed hosting with monitoring, backups, and security.",
     icon: Server,
+    image: "/images/hero/web-hosting.png",
+  },
+  {
+    name: "Network Infrastructure",
+    href: "/services/network-infrastructure",
+    description:
+      "LAN, WAN, wireless, cabling, and security - we do it all.",
+    icon: Network,
+    image: "/images/hero/network-infrastructure.png",
   },
 ];
 
@@ -78,42 +94,56 @@ const industries: MenuItem[] = [
     description:
       "Donor platforms and impact tools for non-profit organizations.",
     icon: HeartHandshake,
+    image: "/images/hero/ngo.png",
   },
   {
     name: "Finance",
     href: "/industries/finance",
     description: "Secure, compliant solutions for banking and fintech.",
     icon: Landmark,
+    image: "/images/hero/finance.png",
   },
   {
     name: "Education",
     href: "/industries/education",
     description: "Learning platforms and student management systems.",
     icon: GraduationCap,
+    image: "/images/hero/education.png",
   },
   {
     name: "Hospitality",
     href: "/industries/hospitality",
     description: "Booking, guest experience, and operations software.",
     icon: Hotel,
+    image: "/images/hero/hospitality.png",
   },
   {
     name: "Retail",
     href: "/industries/retail",
     description: "E-commerce, POS, and inventory solutions that scale.",
     icon: ShoppingCart,
+    image: "/images/hero/retail.png",
   },
   {
     name: "Telecom & Media",
-    href: "/industries/telecom-media",
+    href: "/industries/telecom",
     description: "Streaming, content delivery, and subscriber platforms.",
     icon: Radio,
+    image: "/images/hero/telecom.png",
   },
   {
     name: "Public Sector",
     href: "/industries/public-sector",
     description: "Citizen services and digital government infrastructure.",
     icon: Building2,
+    image: "/images/hero/public-sector.png",
+  },
+  {
+    name: "Healthcare",
+    href: "/industries/healthcare",
+    description: "Patient-centered platforms and secure clinical systems.",
+    icon: Stethoscope,
+    image: "/images/hero/pharmacy.webp",
   },
 ];
 
@@ -147,7 +177,7 @@ function MegaMenu({
       {isOpen && (
         <div className="absolute left-0 right-0 top-full z-50">
           <div className="container mx-auto px-4 lg:px-8">
-            <div className="ml-auto w-full lg:w-1/2 overflow-hidden rounded-b-lg border border-t-0 border-border bg-popover shadow-xl">
+            <div className="w-full overflow-hidden rounded-b-lg border border-t-0 border-border bg-popover shadow-xl">
               <div className="flex items-center justify-between border-b border-border bg-secondary/60 px-6 py-3">
                 <p className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">
                   {label}
@@ -160,18 +190,23 @@ function MegaMenu({
                   View all
                 </Link>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 p-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 p-4">
                 {items.map((item) => {
-                  const Icon = item.icon;
                   return (
                     <Link
                       key={item.href}
                       href={item.href}
                       onClick={onClose}
-                      className="group flex gap-3 rounded-md p-3 transition-colors hover:bg-secondary"
+                      className="group flex items-center gap-4 rounded-md p-3 transition-colors hover:bg-secondary"
                     >
-                      <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                        <Icon className="h-5 w-5" />
+                      <span className="relative h-16 w-24 shrink-0 overflow-hidden rounded-md bg-secondary">
+                        <Image
+                          src={item.image}
+                          alt=""
+                          fill
+                          sizes="96px"
+                          className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
                       </span>
                       <span className="min-w-0">
                         <span className="block font-medium text-foreground group-hover:text-primary transition-colors">

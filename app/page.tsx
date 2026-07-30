@@ -22,6 +22,8 @@ import {
   ShoppingBag,
   Radio,
   Building,
+  Stethoscope,
+  Network,
   CheckCircle2,
   TrendingUp,
   Activity,
@@ -63,6 +65,13 @@ const services = [
       "Reliable, secure, and scalable hosting solutions for your applications.",
     href: "/services/web-hosting",
   },
+  {
+    icon: Network,
+    title: "Network Infrastructure",
+    description:
+      "LAN, WAN, wireless, cabling, and security - we design, build, and support it all.",
+    href: "/services/network-infrastructure",
+  },
 ];
 
 const industries = [
@@ -73,6 +82,7 @@ const industries = [
   { icon: ShoppingBag, name: "Retail", href: "/industries/retail" },
   { icon: Radio, name: "Telecom & Media", href: "/industries/telecom-media" },
   { icon: Building, name: "Public Sector", href: "/industries/public-sector" },
+  { icon: Stethoscope, name: "Healthcare", href: "/industries/healthcare" },
 ];
 
 const stats = [

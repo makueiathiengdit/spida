@@ -11,6 +11,7 @@ const services = [
   { name: "API & Integrations", href: "/services/api-integrations" },
   { name: "Data Analytics", href: "/services/data-analytics" },
   { name: "Web Hosting", href: "/services/web-hosting" },
+  { name: "Network Infrastructure", href: "/services/network-infrastructure" },
 ];
 
 const industries = [
@@ -19,8 +20,9 @@ const industries = [
   { name: "Education", href: "/industries/education" },
   { name: "Hospitality", href: "/industries/hospitality" },
   { name: "Retail", href: "/industries/retail" },
-  { name: "Telecom & Media", href: "/industries/telecom-media" },
+  { name: "Telecom & Media", href: "/industries/telecom" },
   { name: "Public Sector", href: "/industries/public-sector" },
+  { name: "Healthcare", href: "/industries/healthcare" },
 ];
 
 const company = [

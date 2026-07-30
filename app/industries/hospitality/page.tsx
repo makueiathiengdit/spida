@@ -37,6 +37,29 @@ const solutions = [
   { icon: Globe, title: "Guest Portals", description: "Self-service portals for check-in and concierge" },
 ]
 
+const systems = [
+  {
+    name: "Property Management System (PMS)",
+    description: "Manage room bookings, housekeeping, and guest check-in/out for hotels and lodges, built to keep working through intermittent power and internet."
+  },
+  {
+    name: "Direct Booking & Reservation Engine",
+    description: "A commission-free booking portal integrated with mobile money for deposits and payments, reducing dependency on international OTAs."
+  },
+  {
+    name: "Restaurant & Bar Point-of-Sale (POS)",
+    description: "An offline-capable POS for restaurants and bars that keeps taking orders and payments during outages, syncing sales data once back online."
+  },
+  {
+    name: "Guest Experience & Concierge App",
+    description: "Digital check-in, service requests, and local recommendations that give guests a smoother, more personal stay."
+  },
+  {
+    name: "Multi-Property Revenue Dashboard",
+    description: "Centralized reporting and occupancy tracking for hotel groups managing multiple properties across the country."
+  },
+]
+
 const benefits = [
   "Increase direct bookings",
   "Streamline operations",
@@ -87,8 +110,30 @@ export default function HospitalityPage() {
         </div>
       </section>
 
-      {/* Solutions Section */}
+      {/* Systems Section */}
       <section className="py-16 lg:py-24 bg-secondary">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-primary font-medium text-sm uppercase tracking-wider mb-2">Systems We Build</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Hospitality-Specific Systems</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Purpose-built software designed around how hotels, lodges, and restaurants actually operate.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {systems.map((system, index) => (
+              <div key={index} className="bg-card rounded-xl p-6 border border-border/50">
+                <h3 className="text-xl font-semibold text-foreground mb-2">{system.name}</h3>
+                <p className="text-muted-foreground">{system.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Solutions Section */}
+      <section className="py-16 lg:py-24 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-primary font-medium text-sm uppercase tracking-wider mb-2">Our Solutions</p>
@@ -110,7 +155,7 @@ export default function HospitalityPage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 lg:py-24 bg-background">
+      <section className="py-16 lg:py-24 bg-secondary">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>

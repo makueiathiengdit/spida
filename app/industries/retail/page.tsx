@@ -37,6 +37,29 @@ const solutions = [
   { icon: Globe, title: "Omnichannel Solutions", description: "Unified commerce across online and offline" },
 ]
 
+const systems = [
+  {
+    name: "Point-of-Sale & Inventory Management System",
+    description: "An offline-capable POS with real-time inventory sync across multiple shop locations, so sales keep ringing up during outages."
+  },
+  {
+    name: "Mobile Money Payment Gateway",
+    description: "Accept m-GURUSH, MoMo, and card payments both in-store and online through a single integrated checkout."
+  },
+  {
+    name: "Supply Chain & Distributor Portal",
+    description: "Track stock movement from warehouse to retail outlet, reducing stockouts and improving reorder accuracy."
+  },
+  {
+    name: "E-commerce & Delivery Platform",
+    description: "An online storefront with delivery logistics tracking built for urban markets like Juba."
+  },
+  {
+    name: "Loyalty & Customer Rewards Platform",
+    description: "Track customer purchases and manage rewards programs that keep shoppers coming back."
+  },
+]
+
 const benefits = [
   "Increase online sales",
   "Optimize inventory levels",
@@ -87,8 +110,30 @@ export default function RetailPage() {
         </div>
       </section>
 
-      {/* Solutions Section */}
+      {/* Systems Section */}
       <section className="py-16 lg:py-24 bg-secondary">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-primary font-medium text-sm uppercase tracking-wider mb-2">Systems We Build</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Retail-Specific Systems</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Purpose-built software designed around how shops and distributors actually move product.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {systems.map((system, index) => (
+              <div key={index} className="bg-card rounded-xl p-6 border border-border/50">
+                <h3 className="text-xl font-semibold text-foreground mb-2">{system.name}</h3>
+                <p className="text-muted-foreground">{system.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Solutions Section */}
+      <section className="py-16 lg:py-24 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-primary font-medium text-sm uppercase tracking-wider mb-2">Our Solutions</p>
@@ -110,7 +155,7 @@ export default function RetailPage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 lg:py-24 bg-background">
+      <section className="py-16 lg:py-24 bg-secondary">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>

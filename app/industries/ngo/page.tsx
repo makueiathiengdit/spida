@@ -37,6 +37,34 @@ const services = [
   },
 ]
 
+const systems = [
+  {
+    name: "Donor & Grants Management System (DGMS)",
+    description:
+      "A centralized donor database with grant tracking, automated receipt generation, and integrated mobile money giving via m-GURUSH and MoMo."
+  },
+  {
+    name: "Volunteer & Field Staff Coordination Platform",
+    description:
+      "Scheduling, task assignment, and check-in tools for volunteers and field teams working across remote program areas."
+  },
+  {
+    name: "Program & Impact Monitoring (M&E) System",
+    description:
+      "Track beneficiaries, log activity data, and generate donor-ready reports aligned with common humanitarian reporting formats."
+  },
+  {
+    name: "Beneficiary Registration & Case Management System",
+    description:
+      "A secure digital registry for aid distribution that prevents duplicate beneficiary records across multiple programs."
+  },
+  {
+    name: "Offline-First Field Data Collection App",
+    description:
+      "A mobile app for community and field officers to capture survey and household data without continuous internet access, syncing once back online."
+  },
+]
+
 const benefits = [
   "Increase donor retention and engagement",
   "Streamline volunteer management",
@@ -102,8 +130,30 @@ export default function NGOPage() {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Systems Section */}
       <section className="py-16 lg:py-24 bg-secondary">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-primary font-medium text-sm uppercase tracking-wider mb-2">Systems We Build</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">NGO-Specific Systems</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Purpose-built software designed around how non-profits actually operate in the field.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {systems.map((system, index) => (
+              <div key={index} className="bg-card rounded-xl p-6 border border-border/50">
+                <h3 className="text-xl font-semibold text-foreground mb-2">{system.name}</h3>
+                <p className="text-muted-foreground">{system.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 lg:py-24 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
