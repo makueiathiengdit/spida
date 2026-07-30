@@ -1,0 +1,153 @@
+import Link from "next/link"
+import { HeroSection } from "@/components/hero-section"
+import { Button } from "@/components/ui/button"
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { ArrowRight, Globe, Code2, Plug, Cog, Shield, CheckCircle2 } from "lucide-react"
+
+const services = [
+  {
+    icon: Globe,
+    title: "Web Design & Development",
+    description: "Secure, professional banking and fintech websites that build trust and drive conversions.",
+    href: "/services/web-design-development"
+  },
+  {
+    icon: Code2,
+    title: "Custom Software Development",
+    description: "Trading platforms, risk management systems, and custom financial applications.",
+    href: "/services/custom-software"
+  },
+  {
+    icon: Plug,
+    title: "API & Integration",
+    description: "Connect with payment gateways, banking APIs, and financial data providers.",
+    href: "/services/api-integrations"
+  },
+  {
+    icon: Cog,
+    title: "Process Automation",
+    description: "Automate compliance workflows, reporting, and back-office operations.",
+    href: "/services/api-integrations"
+  },
+]
+
+const benefits = [
+  "PCI-DSS compliant solutions",
+  "Bank-grade security standards",
+  "Real-time transaction processing",
+  "Regulatory compliance support",
+  "Fraud detection capabilities",
+  "Scalable infrastructure",
+]
+
+const expertise = [
+  { title: "Banking", description: "Core banking systems, mobile banking, and digital transformation" },
+  { title: "Insurance", description: "Claims processing, policy management, and customer portals" },
+  { title: "Investment", description: "Portfolio management, trading platforms, and analytics" },
+  { title: "Payments", description: "Payment processing, digital wallets, and merchant services" },
+]
+
+export default function FinancePage() {
+  return (
+    <div>
+      <HeroSection
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Industries" }, { label: "Finance & Banking" }]}
+        subtitle="Industries We Serve"
+        title="Finance & Banking"
+        description="We build secure, compliant financial technology solutions that help banks, insurance companies, and fintech firms innovate while maintaining the highest security standards."
+        primaryAction={{ label: "Get Started", href: "/contact" }}
+        secondaryAction={{ label: "View Our Work", href: "/portfolio" }}
+        imageSrc="/images/hero/finance.png"
+        imageAlt="Modern financial district with a professional using a secure banking app"
+      />
+
+      {/* Services Section */}
+      <section className="py-16 lg:py-24 bg-background">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-primary font-medium text-sm uppercase tracking-wider mb-2">What We Offer</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Services for Finance</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Enterprise-grade financial technology solutions built with security at the core.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {services.map((service, index) => (
+              <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border/50">
+                <CardHeader>
+                  <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                    <service.icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <CardTitle className="text-xl">{service.title}</CardTitle>
+                  <CardDescription>{service.description}</CardDescription>
+                </CardHeader>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Security & Compliance */}
+      <section className="py-16 lg:py-24 bg-secondary">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-primary font-medium text-sm uppercase tracking-wider mb-2">Security First</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                Built for Compliance
+              </h2>
+              <p className="text-muted-foreground mb-8 leading-relaxed">
+                Financial services demand the highest levels of security and regulatory compliance. 
+                We build solutions that meet industry standards and help you stay ahead of evolving regulations.
+              </p>
+              <ul className="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <li key={index} className="flex items-center gap-3 text-foreground">
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0" />
+                    {benefit}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-card rounded-2xl p-8 border border-border/50">
+              <div className="flex items-center gap-4 mb-6">
+                <Shield className="h-12 w-12 text-primary" />
+                <div>
+                  <h3 className="text-xl font-bold text-foreground">Security Standards</h3>
+                  <p className="text-muted-foreground">Enterprise-grade protection</p>
+                </div>
+              </div>
+              <div className="space-y-4">
+                {expertise.map((item, index) => (
+                  <div key={index} className="border-l-2 border-primary/30 pl-4">
+                    <h4 className="font-semibold text-foreground">{item.title}</h4>
+                    <p className="text-muted-foreground text-sm">{item.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 lg:py-24 hero-pattern">
+        <div className="container mx-auto px-4 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+            Ready to Transform Your Financial Services?
+          </h2>
+          <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8">
+            {"Let's build secure, compliant solutions that drive your business forward."}
+          </p>
+          <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
+            <Link href="/contact">
+              Schedule a Consultation
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
+        </div>
+      </section>
+    </div>
+  )
+}
