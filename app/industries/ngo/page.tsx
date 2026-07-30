@@ -1,8 +1,32 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { HeroSection } from "@/components/hero-section"
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowRight, Globe, Code2, Plug, Cog, BarChart3, CheckCircle2 } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Software Solutions for NGOs in South Sudan",
+  description:
+    "Donor management, volunteer coordination, and impact tracking systems built for NGOs and non-profits operating in South Sudan, with mobile money giving integration.",
+  keywords: [
+    "NGO software South Sudan",
+    "donor management system South Sudan",
+    "mobile money donation m-GURUSH",
+    "field data collection app South Sudan",
+    "non-profit technology Juba",
+  ],
+  alternates: {
+    canonical: "/industries/ngo",
+  },
+  openGraph: {
+    title: "NGO & Non-Profit Technology Solutions in South Sudan | Spida",
+    description:
+      "Donor management, volunteer coordination, and impact tracking systems for non-profits operating in South Sudan.",
+    url: "/industries/ngo",
+    images: [{ url: "/images/hero/ngo.png", width: 1200, height: 630 }],
+  },
+}
 
 const services = [
   {

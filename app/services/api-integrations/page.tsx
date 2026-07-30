@@ -1,8 +1,32 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { HeroSection } from "@/components/hero-section"
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowRight, Link2, RefreshCw, Shield, Zap, Code, Database } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "API & Systems Integration Services in South Sudan",
+  description:
+    "Connect payment gateways, mobile money, CRMs, and legacy systems with secure API development and integration services for businesses across South Sudan.",
+  keywords: [
+    "API integration services South Sudan",
+    "mobile money integration South Sudan",
+    "system integration Juba",
+    "API development company South Sudan",
+    "workflow automation South Sudan",
+  ],
+  alternates: {
+    canonical: "/services/api-integrations",
+  },
+  openGraph: {
+    title: "API & Integrations in South Sudan | Spida",
+    description:
+      "Connect your systems, automate workflows, and unlock the full potential of your technology stack with expert API development and integration services.",
+    url: "/services/api-integrations",
+    images: [{ url: "/images/hero/api-integrations.png", width: 1200, height: 630 }],
+  },
+}
 
 const features = [
   {

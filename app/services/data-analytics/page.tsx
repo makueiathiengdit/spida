@@ -1,8 +1,32 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { HeroSection } from "@/components/hero-section"
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowRight, BarChart3, PieChart, TrendingUp, Database, Target, Brain } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Data Analytics & Business Intelligence in South Sudan",
+  description:
+    "Turn your organization's data into dashboards, reports, and predictive insights with Spida's data analytics and business intelligence services in South Sudan.",
+  keywords: [
+    "data analytics South Sudan",
+    "business intelligence Juba",
+    "data visualization South Sudan",
+    "predictive analytics South Sudan",
+    "KPI dashboards South Sudan",
+  ],
+  alternates: {
+    canonical: "/services/data-analytics",
+  },
+  openGraph: {
+    title: "Data Analytics Services in South Sudan | Spida",
+    description:
+      "Unlock the power of your data with comprehensive analytics solutions that help organizations in South Sudan make data-driven decisions.",
+    url: "/services/data-analytics",
+    images: [{ url: "/images/hero/data-analytics.png", width: 1200, height: 630 }],
+  },
+}
 
 const features = [
   {

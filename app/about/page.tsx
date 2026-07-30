@@ -1,7 +1,30 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { HeroSection } from "@/components/hero-section";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description:
+    "Spida is a technology company delivering custom software, web, and network infrastructure solutions to businesses, NGOs, and government agencies across South Sudan.",
+  keywords: [
+    "software company South Sudan",
+    "IT company Juba",
+    "technology partner South Sudan",
+    "about Spida",
+  ],
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About Spida | Software Company Serving South Sudan",
+    description:
+      "Meet Spida, a technology company delivering custom software, web, and network infrastructure solutions across South Sudan.",
+    url: "/about",
+    images: [{ url: "/images/hero/about.png", width: 1200, height: 630 }],
+  },
+};
 import {
   ArrowRight,
   Target,

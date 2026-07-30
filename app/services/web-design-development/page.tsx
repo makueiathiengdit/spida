@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { HeroSection } from "@/components/hero-section";
 import { Button } from "@/components/ui/button";
@@ -8,6 +9,29 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+
+export const metadata: Metadata = {
+  title: "Web Design & Development in South Sudan",
+  description:
+    "Responsive, high-performance websites and web applications built for businesses in Juba and across South Sudan. SEO-ready, mobile-friendly, and built to convert.",
+  keywords: [
+    "web design South Sudan",
+    "web development Juba",
+    "website design company South Sudan",
+    "responsive website design South Sudan",
+    "business website South Sudan",
+  ],
+  alternates: {
+    canonical: "/services/web-design-development",
+  },
+  openGraph: {
+    title: "Web Design & Development in South Sudan | Spida",
+    description:
+      "Stunning, high-performance websites that engage users and drive conversions for businesses across South Sudan.",
+    url: "/services/web-design-development",
+    images: [{ url: "/images/hero/web-design.png", width: 1200, height: 630 }],
+  },
+};
 import {
   CheckCircle2,
   ArrowRight,

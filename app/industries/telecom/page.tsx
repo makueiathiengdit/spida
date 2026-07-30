@@ -1,8 +1,32 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { HeroSection } from "@/components/hero-section"
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowRight, Globe, Code2, Plug, Radio, Phone, BarChart3, CheckCircle2 } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Telecom & Media Software Solutions in South Sudan",
+  description:
+    "Billing, network monitoring, and value-added service (VAS) platforms for telecom operators and media companies in South Sudan.",
+  keywords: [
+    "telecom software South Sudan",
+    "VAS platform South Sudan",
+    "USSD applications South Sudan",
+    "network monitoring Juba",
+    "subscriber billing system South Sudan",
+  ],
+  alternates: {
+    canonical: "/industries/telecom",
+  },
+  openGraph: {
+    title: "Telecom & Media Technology Solutions in South Sudan | Spida",
+    description:
+      "Billing systems, network monitoring, and VAS platforms for telecom operators and media companies in South Sudan.",
+    url: "/industries/telecom",
+    images: [{ url: "/images/hero/telecom.png", width: 1200, height: 630 }],
+  },
+}
 
 const services = [
   {

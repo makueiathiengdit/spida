@@ -1,8 +1,33 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { HeroSection } from "@/components/hero-section"
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowRight, Globe, Code2, Plug, Cog, Shield, CheckCircle2 } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Banking & Fintech Software in South Sudan",
+  description:
+    "Core banking, mobile money, and regulatory reporting systems for banks, SACCOs, and microfinance institutions in South Sudan, built for compliance and security.",
+  keywords: [
+    "core banking system South Sudan",
+    "SACCO software South Sudan",
+    "mobile money integration m-GURUSH MoMo",
+    "fintech South Sudan",
+    "microfinance software Juba",
+    "Bank of South Sudan compliance software",
+  ],
+  alternates: {
+    canonical: "/industries/finance",
+  },
+  openGraph: {
+    title: "Finance & Banking Technology Solutions in South Sudan | Spida",
+    description:
+      "Secure, compliant financial technology for banks, SACCOs, microfinance institutions, and fintech firms operating in South Sudan.",
+    url: "/industries/finance",
+    images: [{ url: "/images/hero/finance.png", width: 1200, height: 630 }],
+  },
+}
 
 const services = [
   {

@@ -1,7 +1,31 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { HeroSection } from "@/components/hero-section";
 import { Button } from "@/components/ui/button";
+
+export const metadata: Metadata = {
+  title: "Software & IT Services",
+  description:
+    "Web design, custom software, API integrations, data analytics, web hosting, and network infrastructure — Spida delivers full-stack IT services across South Sudan.",
+  keywords: [
+    "IT services South Sudan",
+    "software services Juba",
+    "web design and development South Sudan",
+    "network infrastructure South Sudan",
+    "web hosting South Sudan",
+  ],
+  alternates: {
+    canonical: "/services",
+  },
+  openGraph: {
+    title: "Software & IT Services in South Sudan | Spida",
+    description:
+      "From web platforms to custom software, integrations, analytics, hosting, and networking — the full stack of digital services businesses in South Sudan need to grow.",
+    url: "/services",
+    images: [{ url: "/images/hero/api-integrations.png", width: 1200, height: 630 }],
+  },
+};
 import {
   ArrowRight,
   Globe,

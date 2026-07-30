@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { HeroSection } from "@/components/hero-section";
 import { Button } from "@/components/ui/button";
@@ -7,6 +8,30 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+
+export const metadata: Metadata = {
+  title: "Network Infrastructure & LAN/WAN Setup in South Sudan",
+  description:
+    "LAN, WAN, wireless, structured cabling, and network security design, installation, and support for offices and multi-site organizations across South Sudan.",
+  keywords: [
+    "network infrastructure South Sudan",
+    "LAN WAN setup Juba",
+    "structured cabling South Sudan",
+    "wireless network installation South Sudan",
+    "IT networking company Juba",
+    "network security South Sudan",
+  ],
+  alternates: {
+    canonical: "/services/network-infrastructure",
+  },
+  openGraph: {
+    title: "Network Infrastructure in South Sudan | Spida",
+    description:
+      "LAN, WAN, wireless, cabling, and security - we design, build, and support networks across South Sudan, from a single office to multi-site connectivity.",
+    url: "/services/network-infrastructure",
+    images: [{ url: "/images/hero/network-infrastructure.png", width: 1200, height: 630 }],
+  },
+};
 import {
   ArrowRight,
   Network,

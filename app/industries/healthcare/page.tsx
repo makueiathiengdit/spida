@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { HeroSection } from "@/components/hero-section";
 import { Button } from "@/components/ui/button";
@@ -16,6 +17,29 @@ import {
   BarChart3,
   CheckCircle2,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Healthcare & Hospital Management Software in South Sudan",
+  description:
+    "Electronic health records, patient scheduling, and telemedicine systems connecting clinics and community health workers across South Sudan.",
+  keywords: [
+    "hospital management system South Sudan",
+    "EHR software South Sudan",
+    "telemedicine South Sudan",
+    "health data collection app Juba",
+    "clinic management software South Sudan",
+  ],
+  alternates: {
+    canonical: "/industries/healthcare",
+  },
+  openGraph: {
+    title: "Healthcare Technology Solutions in South Sudan | Spida",
+    description:
+      "Patient records, scheduling, and telemedicine platforms that support better care delivery across South Sudan, from clinic floor to remote outreach.",
+    url: "/industries/healthcare",
+    images: [{ url: "/images/hero/healthcare.webp", width: 1200, height: 630 }],
+  },
+};
 
 const services = [
   {

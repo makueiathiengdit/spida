@@ -1,8 +1,30 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { HeroSection } from "@/components/hero-section"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowRight, ExternalLink } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Portfolio",
+  description:
+    "Explore Spida's portfolio of software, web, and infrastructure projects delivered for NGOs, banks, schools, hotels, retailers, and telecom operators across South Sudan.",
+  keywords: [
+    "software projects South Sudan",
+    "web development portfolio Juba",
+    "case studies South Sudan technology",
+  ],
+  alternates: {
+    canonical: "/portfolio",
+  },
+  openGraph: {
+    title: "Our Work | Software Projects Delivered in South Sudan",
+    description:
+      "A selection of Spida's software, web, and infrastructure projects across South Sudan and beyond.",
+    url: "/portfolio",
+    images: [{ url: "/images/hero/portfolio.png", width: 1200, height: 630 }],
+  },
+}
 
 const projects = [
   {

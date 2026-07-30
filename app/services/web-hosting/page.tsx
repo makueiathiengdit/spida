@@ -1,8 +1,31 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { HeroSection } from "@/components/hero-section"
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowRight, Server, Shield, Zap, Clock, HeadphonesIcon, Globe } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Web Hosting Services in South Sudan",
+  description:
+    "Reliable, secure, and locally-supported web hosting plans for websites and applications serving businesses across Juba and South Sudan.",
+  keywords: [
+    "web hosting South Sudan",
+    "website hosting Juba",
+    "managed hosting South Sudan",
+    "server hosting South Sudan",
+  ],
+  alternates: {
+    canonical: "/services/web-hosting",
+  },
+  openGraph: {
+    title: "Web Hosting Services in South Sudan | Spida",
+    description:
+      "Reliable, secure, and scalable hosting solutions that keep websites and applications running smoothly for businesses in South Sudan.",
+    url: "/services/web-hosting",
+    images: [{ url: "/images/hero/web-hosting.png", width: 1200, height: 630 }],
+  },
+}
 
 const features = [
   {

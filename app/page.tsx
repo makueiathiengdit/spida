@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { HeroSection } from "@/components/hero-section";
 import { Button } from "@/components/ui/button";
@@ -84,6 +85,31 @@ const industries = [
   { icon: Building, name: "Public Sector", href: "/industries/public-sector" },
   { icon: Stethoscope, name: "Healthcare", href: "/industries/healthcare" },
 ];
+
+export const metadata: Metadata = {
+  title: "Software Development Company in South Sudan",
+  description:
+    "Spida builds custom software, websites, network infrastructure, and data systems for businesses, NGOs, banks, schools, and government agencies across Juba and South Sudan.",
+  keywords: [
+    "software development company South Sudan",
+    "software company Juba",
+    "IT company South Sudan",
+    "web design South Sudan",
+    "custom software development Juba",
+    "network infrastructure South Sudan",
+    "digital transformation South Sudan",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Spida | Software Development Company in South Sudan",
+    description:
+      "Custom software, websites, network infrastructure, and data systems for businesses, NGOs, banks, schools, and government agencies across South Sudan.",
+    url: "/",
+    images: [{ url: "/images/hero/home.png", width: 1200, height: 630 }],
+  },
+};
 
 const stats = [
   { value: "100+", label: "Projects Delivered" },

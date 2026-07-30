@@ -1,8 +1,32 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { HeroSection } from "@/components/hero-section"
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowRight, Globe, Code2, Plug, BarChart3, ShoppingCart, Package, CheckCircle2 } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Retail & POS Software in South Sudan",
+  description:
+    "Point-of-sale, inventory, and e-commerce systems with mobile money payments built for shops and distributors in Juba and across South Sudan.",
+  keywords: [
+    "POS system South Sudan",
+    "retail software Juba",
+    "inventory management system South Sudan",
+    "e-commerce South Sudan",
+    "mobile money payments retail South Sudan",
+  ],
+  alternates: {
+    canonical: "/industries/retail",
+  },
+  openGraph: {
+    title: "Retail Technology Solutions in South Sudan | Spida",
+    description:
+      "E-commerce platforms, POS, and inventory management systems that help retailers thrive across South Sudan.",
+    url: "/industries/retail",
+    images: [{ url: "/images/hero/retail.png", width: 1200, height: 630 }],
+  },
+}
 
 const services = [
   {

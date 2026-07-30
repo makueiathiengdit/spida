@@ -1,8 +1,32 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { HeroSection } from "@/components/hero-section"
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowRight, Globe, Code2, Plug, BarChart3, Calendar, UtensilsCrossed, CheckCircle2 } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Hotel & Restaurant Software in South Sudan",
+  description:
+    "Property management, direct booking, and offline-capable POS systems built for hotels, lodges, and restaurants across Juba and South Sudan.",
+  keywords: [
+    "hotel management system South Sudan",
+    "property management system Juba",
+    "restaurant POS South Sudan",
+    "booking engine South Sudan",
+    "hospitality software Juba",
+  ],
+  alternates: {
+    canonical: "/industries/hospitality",
+  },
+  openGraph: {
+    title: "Hospitality Technology Solutions in South Sudan | Spida",
+    description:
+      "Property management systems, direct booking engines, and POS platforms that keep working through intermittent power and internet in South Sudan.",
+    url: "/industries/hospitality",
+    images: [{ url: "/images/hero/hospitality.png", width: 1200, height: 630 }],
+  },
+}
 
 const services = [
   {

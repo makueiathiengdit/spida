@@ -1,8 +1,32 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { HeroSection } from "@/components/hero-section"
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowRight, Globe, Code2, Plug, BookOpen, Users, CheckCircle2 } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "School & University Management Systems in South Sudan",
+  description:
+    "Student information systems, tuition payment portals, and offline-capable e-learning platforms for schools, universities, and ministries in South Sudan.",
+  keywords: [
+    "school management system South Sudan",
+    "university management system Juba",
+    "student information system South Sudan",
+    "e-learning South Sudan",
+    "education software Juba",
+  ],
+  alternates: {
+    canonical: "/industries/education",
+  },
+  openGraph: {
+    title: "Education Technology Solutions in South Sudan | Spida",
+    description:
+      "Learning management systems, student information systems, and campus management platforms for schools and universities across South Sudan.",
+    url: "/industries/education",
+    images: [{ url: "/images/hero/education.png", width: 1200, height: 630 }],
+  },
+}
 
 const services = [
   {

@@ -1,7 +1,29 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { HeroSection } from "@/components/hero-section";
 import { Button } from "@/components/ui/button";
+
+export const metadata: Metadata = {
+  title: "Industries We Serve",
+  description:
+    "Spida delivers tailored technology solutions for NGOs, banks, schools, hotels, retailers, telecoms, government agencies, and healthcare providers across South Sudan.",
+  keywords: [
+    "industries served South Sudan",
+    "sector-specific software South Sudan",
+    "technology solutions Juba",
+  ],
+  alternates: {
+    canonical: "/industries",
+  },
+  openGraph: {
+    title: "Industries We Serve in South Sudan | Spida",
+    description:
+      "Specialized technology solutions for NGOs, finance, education, hospitality, retail, telecom, public sector, and healthcare organizations across South Sudan.",
+    url: "/industries",
+    images: [{ url: "/images/hero/telecom.png", width: 1200, height: 630 }],
+  },
+};
 import {
   ArrowRight,
   HeartHandshake,

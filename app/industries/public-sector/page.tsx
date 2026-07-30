@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { HeroSection } from "@/components/hero-section";
 import { Button } from "@/components/ui/button";
@@ -17,6 +18,29 @@ import {
   Users,
   CheckCircle2,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "e-Government & Public Sector Software in South Sudan",
+  description:
+    "Civil registration, citizen service portals, and case management systems helping government ministries and agencies in South Sudan modernize service delivery.",
+  keywords: [
+    "e-government South Sudan",
+    "civil registration system South Sudan",
+    "government software Juba",
+    "national ID registry South Sudan",
+    "public sector digital transformation South Sudan",
+  ],
+  alternates: {
+    canonical: "/industries/public-sector",
+  },
+  openGraph: {
+    title: "Public Sector Technology Solutions in South Sudan | Spida",
+    description:
+      "e-Government portals, civil registration, and case management systems that improve citizen services across South Sudan.",
+    url: "/industries/public-sector",
+    images: [{ url: "/images/hero/bank-of-ssd.jpg", width: 1200, height: 630 }],
+  },
+};
 
 const services = [
   {

@@ -1,8 +1,32 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { HeroSection } from "@/components/hero-section"
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowRight, Layers, Database, Cloud, Cog, Users, LineChart } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Custom Software Development in South Sudan",
+  description:
+    "Bespoke enterprise applications, CRM/ERP systems, and legacy modernization built for organizations across South Sudan. From concept to deployment.",
+  keywords: [
+    "custom software development South Sudan",
+    "bespoke software Juba",
+    "enterprise application development South Sudan",
+    "ERP software South Sudan",
+    "legacy system modernization South Sudan",
+  ],
+  alternates: {
+    canonical: "/services/custom-software",
+  },
+  openGraph: {
+    title: "Custom Software Development in South Sudan | Spida",
+    description:
+      "We build bespoke software solutions that address the unique business challenges of organizations across South Sudan.",
+    url: "/services/custom-software",
+    images: [{ url: "/images/hero/custom-software.png", width: 1200, height: 630 }],
+  },
+}
 
 const features = [
   {
