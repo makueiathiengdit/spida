@@ -188,9 +188,9 @@ export default function PublicSectorPage() {
             <p className="text-primary font-medium text-sm uppercase tracking-wider mb-2">
               Systems We Build
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            {/* <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Public Sector-Specific Systems
-            </h2>
+            </h2> */}
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Purpose-built software designed around how ministries and agencies
               actually deliver services.

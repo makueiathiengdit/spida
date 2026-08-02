@@ -105,7 +105,7 @@ const systems = [
     description:
       "An offline-capable mobile app for CHWs to log home visits, immunizations, and maternal health data in the field, syncing once connectivity is available.",
   },
-]
+];
 
 const benefits = [
   "Improve patient access and engagement",
@@ -194,12 +194,12 @@ export default function HealthcarePage() {
             <p className="text-primary font-medium text-sm uppercase tracking-wider mb-2">
               Systems We Build
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            {/* <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Healthcare-Specific Systems
-            </h2>
+            </h2> */}
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Purpose-built software designed around the realities of
-              delivering care - from clinic floor to remote outreach.
+              Purpose-built software designed around the realities of delivering
+              care - from clinic floor to remote outreach.
             </p>
           </div>
 

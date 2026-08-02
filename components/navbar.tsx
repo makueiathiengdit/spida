@@ -80,11 +80,18 @@ const services: MenuItem[] = [
   {
     name: "Network Infrastructure",
     href: "/services/network-infrastructure",
-    description:
-      "LAN, WAN, wireless, cabling, and security - we do it all.",
+    description: "LAN, WAN, wireless, cabling, and security - we do it all.",
     icon: Network,
-    image: "/images/hero/network-infrastructure.png",
+    image: "/images/hero/network1.webp",
   },
+
+  // {
+  //   name: "Event Ticketing ",
+  //   href: "/services/ticketing",
+  //   description: "Book tickets for sport events, shows, festivals and concepts",
+  //   icon: Network,
+  //   image: "/images/hero/telecom.png",
+  // },
 ];
 
 const industries: MenuItem[] = [
