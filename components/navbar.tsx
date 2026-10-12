@@ -264,6 +264,7 @@ export function Navbar() {
             <Mail className="h-3.5 w-3.5" />
             info@spidasystems.com
           </a>
+          {/* TODO: restore once we have a phone number
           <a
             href="tel:+15551234567"
             className="flex items-center gap-1.5 hover:text-primary transition-colors"
@@ -271,6 +272,7 @@ export function Navbar() {
             <Phone className="h-3.5 w-3.5" />
             +1 (555) 123-4567
           </a>
+          */}
         </div>
       </div>
 

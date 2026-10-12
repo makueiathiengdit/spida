@@ -17,12 +17,13 @@ const contactInfo = [
     value: "info@spidasystems.com",
     description: "Send us an email anytime",
   },
-  {
-    icon: Phone,
-    title: "Phone",
-    value: "+1 (555) 123-4567",
-    description: "Mon-Fri from 9am to 6pm",
-  },
+  // TODO: restore once we have a phone number
+  // {
+  //   icon: Phone,
+  //   title: "Phone",
+  //   value: "+1 (555) 123-4567",
+  //   description: "Mon-Fri from 9am to 6pm",
+  // },
   {
     icon: MapPin,
     title: "Office",
