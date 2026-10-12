@@ -53,10 +53,12 @@ export function Footer() {
                 <Mail className="h-4 w-4 text-primary" />
                 <span>info@spidasystems.com</span>
               </div>
+              {/* TODO: restore once we have a phone number
               <div className="flex items-center gap-2 text-background/70">
                 <Phone className="h-4 w-4 text-primary" />
                 <span>+211 912 399 000</span>
               </div>
+              */}
               <div className="flex items-center gap-2 text-background/70">
                 <MapPin className="h-4 w-4 text-primary" />
                 <span>Juba, South Sudan</span>
