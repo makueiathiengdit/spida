@@ -51,15 +51,15 @@ export function Footer() {
             <div className="space-y-2 text-sm">
               <div className="flex items-center gap-2 text-background/70">
                 <Mail className="h-4 w-4 text-primary" />
-                <span>contact@spida.com</span>
+                <span>info@spidasystems.com</span>
               </div>
               <div className="flex items-center gap-2 text-background/70">
                 <Phone className="h-4 w-4 text-primary" />
-                <span>+1 (555) 123-4567</span>
+                <span>+211 912 399 000</span>
               </div>
               <div className="flex items-center gap-2 text-background/70">
                 <MapPin className="h-4 w-4 text-primary" />
-                <span>123 Tech Street, Innovation City</span>
+                <span>Juba, South Sudan</span>
               </div>
             </div>
           </div>

@@ -258,11 +258,11 @@ export function Navbar() {
       <div className="hidden md:block border-b border-border bg-foreground text-background">
         <div className="container mx-auto flex h-9 items-center justify-end gap-6 px-4 lg:px-8 text-xs">
           <a
-            href="mailto:contact@spida.com"
+            href="mailto:info@spidasystems.com"
             className="flex items-center gap-1.5 hover:text-primary transition-colors"
           >
             <Mail className="h-3.5 w-3.5" />
-            contact@spida.com
+            info@spidasystems.com
           </a>
           <a
             href="tel:+15551234567"

@@ -14,7 +14,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    value: "info@kkt.com",
+    value: "info@spidasystems.com",
     description: "Send us an email anytime",
   },
   {
