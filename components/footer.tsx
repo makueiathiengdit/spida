@@ -50,17 +50,17 @@ export function Footer() {
             </p>
             <div className="space-y-2 text-sm">
               <div className="flex items-center gap-2 text-background/70">
-                <Mail className="h-4 w-4 text-primary" />
+                <Mail className="h-4 w-4 text-background" />
                 <span>info@spidasystems.com</span>
               </div>
               {/* TODO: restore once we have a phone number
               <div className="flex items-center gap-2 text-background/70">
-                <Phone className="h-4 w-4 text-primary" />
+                <Phone className="h-4 w-4 text-background" />
                 <span>+211 912 399 000</span>
               </div>
               */}
               <div className="flex items-center gap-2 text-background/70">
-                <MapPin className="h-4 w-4 text-primary" />
+                <MapPin className="h-4 w-4 text-background" />
                 <span>Juba, South Sudan</span>
               </div>
             </div>
@@ -74,7 +74,7 @@ export function Footer() {
                 <li key={service.href}>
                   <Link
                     href={service.href}
-                    className="text-sm text-background/70 hover:text-primary transition-colors"
+                    className="text-sm text-background/70 hover:text-background transition-colors"
                   >
                     {service.name}
                   </Link>
@@ -91,7 +91,7 @@ export function Footer() {
                 <li key={industry.href}>
                   <Link
                     href={industry.href}
-                    className="text-sm text-background/70 hover:text-primary transition-colors"
+                    className="text-sm text-background/70 hover:text-background transition-colors"
                   >
                     {industry.name}
                   </Link>
@@ -108,7 +108,7 @@ export function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-sm text-background/70 hover:text-primary transition-colors"
+                    className="text-sm text-background/70 hover:text-background transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -127,13 +127,13 @@ export function Footer() {
             <div className="flex gap-6">
               <Link
                 href="#"
-                className="text-sm text-background/50 hover:text-primary transition-colors"
+                className="text-sm text-background/50 hover:text-background transition-colors"
               >
                 Privacy Policy
               </Link>
               <Link
                 href="#"
-                className="text-sm text-background/50 hover:text-primary transition-colors"
+                className="text-sm text-background/50 hover:text-background transition-colors"
               >
                 Terms of Service
               </Link>

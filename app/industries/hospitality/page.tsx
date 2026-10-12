@@ -270,7 +270,7 @@ export default function HospitalityPage() {
                 ))}
               </ul>
             </div>
-            <div className="bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl p-8">
+            <div className="bg-primary/10 rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-foreground mb-4">
                 Success Story
               </h3>

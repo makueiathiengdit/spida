@@ -259,7 +259,7 @@ export function Navbar() {
         <div className="container mx-auto flex h-9 items-center justify-end gap-6 px-4 lg:px-8 text-xs">
           <a
             href="mailto:info@spidasystems.com"
-            className="flex items-center gap-1.5 hover:text-primary transition-colors"
+            className="flex items-center gap-1.5 hover:text-background/70 transition-colors"
           >
             <Mail className="h-3.5 w-3.5" />
             info@spidasystems.com
@@ -267,7 +267,7 @@ export function Navbar() {
           {/* TODO: restore once we have a phone number
           <a
             href="tel:+15551234567"
-            className="flex items-center gap-1.5 hover:text-primary transition-colors"
+            className="flex items-center gap-1.5 hover:text-background/70 transition-colors"
           >
             <Phone className="h-3.5 w-3.5" />
             +1 (555) 123-4567

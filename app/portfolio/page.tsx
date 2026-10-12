@@ -131,7 +131,7 @@ export default function PortfolioPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {projects.map((project, index) => (
               <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border/50 overflow-hidden">
-                <div className="h-48 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                <div className="h-48 bg-primary/10 flex items-center justify-center">
                   <div className="text-center">
                     <span className="text-xs font-semibold text-primary uppercase tracking-wider">{project.category}</span>
                     <h3 className="text-2xl font-bold text-foreground mt-2">{project.title}</h3>
