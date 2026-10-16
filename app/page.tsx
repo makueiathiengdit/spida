@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { HeroSection } from "@/components/hero-section";
+import { ServicesFlow } from "@/components/services-flow";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
@@ -58,7 +59,7 @@ const services = [
     description:
       "LAN, WAN, wireless, cabling, and security - we design, build, and support it all.",
     href: "/services/network-infrastructure",
-    image: "/images/hero/network-infrastructure.png",
+    image: "/images/hero/networking.jpg",
   },
 ];
 
@@ -305,21 +306,7 @@ export default function HomePage() {
               </Button>
             </div>
             <div className="relative">
-              <div className="aspect-square bg-secondary rounded-2xl border border-border flex items-center justify-center">
-                <div className="text-center p-8">
-                  <Image
-                    src="/images/logo/navy-logo.png"
-                    alt="Spida"
-                    width={1400}
-                    height={1400}
-                    className="h-32 w-32 rounded-2xl mx-auto mb-6"
-                  />
-                  <p className=" text-2xl font-semibold text-foreground mb-2">
-                    Innovation Driven
-                  </p>
-                  <p className="text-muted-foreground">Results Focused</p>
-                </div>
-              </div>
+              <ServicesFlow />
             </div>
           </div>
         </div>

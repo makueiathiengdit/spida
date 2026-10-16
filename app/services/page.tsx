@@ -82,7 +82,7 @@ const services = [
     description:
       "LAN, WAN, wireless, cabling, and security - we do it all.",
     href: "/services/network-infrastructure",
-    image: "/images/hero/network-infrastructure.png",
+    image: "/images/hero/networking.jpg",
     icon: Network,
   },
 ];

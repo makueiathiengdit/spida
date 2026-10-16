@@ -149,3 +149,49 @@
     linear-gradient(90deg, oklch(0.15 0.12 264 / 0.05) 1px, transparent 1px);
   background-size: 48px 48px;
 }
+
+/* Services flow diagram (Why Choose Spida) — pulse travels hub → node, node border glows on arrival */
+.services-flow .sf-pulse {
+  stroke-dasharray: 0.25 2;
+  stroke-dashoffset: 0.25;
+  animation: sf-travel 3.2s linear infinite;
+  animation-delay: var(--sf-delay, 0s);
+}
+
+.services-flow .sf-node-glow {
+  opacity: 0;
+  filter: drop-shadow(0 0 6px var(--sf-glow));
+  animation: sf-arrive 3.2s ease-out infinite;
+  animation-delay: var(--sf-delay, 0s);
+}
+
+.services-flow .sf-hub-glow {
+  opacity: 0;
+  filter: drop-shadow(0 0 6px var(--sf-glow));
+  animation: sf-depart 3.2s ease-out infinite;
+}
+
+/* Dash head reaches the arrow tip at ~40% of the cycle */
+@keyframes sf-travel {
+  0% { stroke-dashoffset: 0.25; }
+  50%, 100% { stroke-dashoffset: -1; }
+}
+
+@keyframes sf-arrive {
+  0%, 38% { opacity: 0; }
+  43% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+
+@keyframes sf-depart {
+  0% { opacity: 0.9; }
+  20%, 100% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .services-flow .sf-pulse,
+  .services-flow .sf-node-glow,
+  .services-flow .sf-hub-glow {
+    animation: none;
+  }
+}
