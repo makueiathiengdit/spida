@@ -100,14 +100,6 @@ export function ContactForm() {
                   </div>
                 ))}
               </div>
-
-              {/* Map Placeholder */}
-              <div className="bg-secondary rounded-xl h-64 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="h-12 w-12 text-muted-foreground mx-auto mb-2" />
-                  <p className="text-muted-foreground">Map integration available</p>
-                </div>
-              </div>
             </div>
 
             {/* Contact Form */}
