@@ -72,30 +72,30 @@ const stats = [
 
 const timeline = [
   {
-    year: "2009",
+    year: "2021",
     title: "Founded",
     description:
       "Spida was established with a vision to deliver innovative software solutions.",
   },
+  // {
+  //   year: "2012",
+  //   title: "Expansion",
+  //   description: "Expanded our team and opened our first international office.",
+  // },
   {
-    year: "2012",
-    title: "Expansion",
-    description: "Expanded our team and opened our first international office.",
-  },
-  {
-    year: "2016",
+    year: "2023",
     title: "Enterprise Focus",
     description:
       "Started serving enterprise clients across finance and telecom sectors.",
   },
   {
-    year: "2020",
+    year: "2024",
     title: "Digital Transformation",
     description:
       "Helped numerous organizations adapt to the digital-first world.",
   },
   {
-    year: "2024",
+    year: "2026",
     title: "Today",
     description:
       "Continuing to innovate and deliver exceptional solutions worldwide.",
@@ -108,7 +108,7 @@ export default function AboutPage() {
       <HeroSection
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "About" }]}
         subtitle="About Us"
-        title="Building Digital Excellence Since 2009"
+        title="Building Digital Excellence Since 2021"
         description="Spida is a leading software development company dedicated to helping businesses transform through technology. We combine technical expertise with industry knowledge to deliver solutions that drive real results."
         primaryAction={{ label: "Work With Us", href: "/contact" }}
         // secondaryAction={{ label: "View Portfolio", href: "/portfolio" }}
@@ -201,7 +201,7 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline */}
-      <section className="py-16 lg:py-24 bg-secondary">
+      {/* <section className="py-16 lg:py-24 bg-secondary">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-primary font-medium text-sm uppercase tracking-wider mb-2">
@@ -233,7 +233,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-16 lg:py-24 hero-pattern">
