@@ -147,7 +147,7 @@ export default function HealthcarePage() {
         title="Healthcare"
         description="We help healthcare providers and health-focused organizations deliver better care through technology. From patient portals to clinical data systems, we build solutions that support your patients and your staff."
         primaryAction={{ label: "Get Started", href: "/contact" }}
-        secondaryAction={{ label: "View Our Work", href: "/portfolio" }}
+        // secondaryAction={{ label: "View Our Work", href: "/portfolio" }}
         imageSrc="/images/hero/healthcare.webp"
         imageAlt="Heartbeat monitor line representing healthcare technology"
       />

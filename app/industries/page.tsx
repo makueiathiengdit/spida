@@ -105,7 +105,7 @@ export default function IndustriesPage() {
         title="Industries"
         description="We bring specialized knowledge and experience to deliver tailored technology solutions across a wide range of sectors."
         primaryAction={{ label: "Start a Project", href: "/contact" }}
-        secondaryAction={{ label: "View Our Work", href: "/portfolio" }}
+        // secondaryAction={{ label: "View Our Work", href: "/portfolio" }}
         imageSrc="/images/hero/telecom.png"
         imageAlt="Telecommunications tower with antennas against a bright sky"
       />

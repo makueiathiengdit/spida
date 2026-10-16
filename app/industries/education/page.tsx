@@ -136,7 +136,7 @@ export default function EducationPage() {
         title="Education"
         description="We empower educational institutions with technology that enhances learning outcomes, streamlines administration, and connects students, teachers, and parents effectively."
         primaryAction={{ label: "Get Started", href: "/contact" }}
-        secondaryAction={{ label: "View Our Work", href: "/portfolio" }}
+        // secondaryAction={{ label: "View Our Work", href: "/portfolio" }}
         imageSrc="/images/hero/education.png"
         imageAlt="Students using laptops in a modern university learning space"
       />

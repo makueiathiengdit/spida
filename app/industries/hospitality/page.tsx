@@ -141,7 +141,7 @@ export default function HospitalityPage() {
         title="Hospitality"
         description="We help hotels, resorts, and restaurants deliver exceptional guest experiences through innovative technology solutions that streamline operations and boost revenue."
         primaryAction={{ label: "Get Started", href: "/contact" }}
-        secondaryAction={{ label: "View Our Work", href: "/portfolio" }}
+        // secondaryAction={{ label: "View Our Work", href: "/portfolio" }}
         imageSrc="/images/hero/hospitality.png"
         imageAlt="Luxury hotel lobby with a receptionist using a tablet check-in system"
       />

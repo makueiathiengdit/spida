@@ -308,9 +308,9 @@ export function Navbar() {
               onClose={scheduleClose}
             />
 
-            <Button variant="ghost" className="font-medium" asChild>
+            {/* <Button variant="ghost" className="font-medium" asChild>
               <Link href="/portfolio">Case Studies</Link>
-            </Button>
+            </Button> */}
             <Button variant="ghost" className="font-medium" asChild>
               <Link href="/about">About</Link>
             </Button>
@@ -409,13 +409,13 @@ export function Navbar() {
             </div>
 
             <div className="space-y-2 border-t border-border pt-4">
-              <Link
+              {/* <Link
                 href="/portfolio"
                 className="block py-2 text-foreground hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Case Studies
-              </Link>
+              </Link> */}
               <Link
                 href="/about"
                 className="block py-2 text-foreground hover:text-primary transition-colors"

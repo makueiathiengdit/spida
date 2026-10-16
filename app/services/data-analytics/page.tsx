@@ -79,7 +79,7 @@ export default function DataAnalyticsPage() {
         title="Data Analytics"
         description="Unlock the power of your data with our comprehensive analytics solutions. We help you make data-driven decisions that propel your business forward."
         primaryAction={{ label: "Start Analyzing", href: "/contact" }}
-        secondaryAction={{ label: "View Portfolio", href: "/portfolio" }}
+        // secondaryAction={{ label: "View Portfolio", href: "/portfolio" }}
         imageSrc="/images/hero/data-analytics.png"
         imageAlt="Analyst reviewing data dashboards and charts on large screens"
       />

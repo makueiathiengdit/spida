@@ -141,7 +141,7 @@ export default function PublicSectorPage() {
         title="Public Sector"
         description="We partner with government agencies to deliver digital transformation solutions that improve citizen services, enhance transparency, and increase operational efficiency."
         primaryAction={{ label: "Get Started", href: "/contact" }}
-        secondaryAction={{ label: "View Our Work", href: "/portfolio" }}
+        // secondaryAction={{ label: "View Our Work", href: "/portfolio" }}
         imageSrc="/images/hero/bank-of-ssd.jpg"
         imageAlt="Modern government building with a citizen using a digital service kiosk"
       />

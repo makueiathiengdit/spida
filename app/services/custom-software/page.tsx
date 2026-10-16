@@ -79,7 +79,7 @@ export default function CustomSoftwarePage() {
         title="Custom Software Development"
         description="We build bespoke software solutions that address your unique business challenges. From concept to deployment, we deliver software that drives efficiency and growth."
         primaryAction={{ label: "Discuss Your Project", href: "/contact" }}
-        secondaryAction={{ label: "View Portfolio", href: "/portfolio" }}
+        // secondaryAction={{ label: "View Portfolio", href: "/portfolio" }}
         imageSrc="/images/hero/custom-software.png"
         imageAlt="Software developer writing code on a dual-monitor setup"
       />

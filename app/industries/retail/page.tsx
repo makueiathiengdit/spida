@@ -140,7 +140,7 @@ export default function RetailPage() {
         title="Retail"
         description="We help retailers thrive in the digital age with e-commerce platforms, inventory management systems, and omnichannel solutions that drive sales and improve efficiency."
         primaryAction={{ label: "Get Started", href: "/contact" }}
-        secondaryAction={{ label: "View Our Work", href: "/portfolio" }}
+        // secondaryAction={{ label: "View Our Work", href: "/portfolio" }}
         imageSrc="/images/hero/retail.png"
         imageAlt="Modern retail store with a shopper and point-of-sale system"
       />

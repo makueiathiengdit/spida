@@ -157,7 +157,7 @@ export default function TelecomMediaPage() {
         title="Telecom & Media"
         description="We deliver innovative solutions for telecommunications and media companies, from network monitoring systems to value-added services that enhance subscriber experience."
         primaryAction={{ label: "Get Started", href: "/contact" }}
-        secondaryAction={{ label: "View Our Work", href: "/portfolio" }}
+        // secondaryAction={{ label: "View Our Work", href: "/portfolio" }}
         imageSrc="/images/hero/telecom.png"
         imageAlt="Telecommunications tower with antennas against a bright sky"
       />

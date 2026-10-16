@@ -139,7 +139,7 @@ export default function WebDesignDevelopmentPage() {
         title="Web Design & Development"
         description="We create stunning, high-performance websites that captivate your audience and drive business growth. From simple landing pages to complex web applications."
         primaryAction={{ label: "Start Your Project", href: "/contact" }}
-        secondaryAction={{ label: "View Portfolio", href: "/portfolio" }}
+        // secondaryAction={{ label: "View Portfolio", href: "/portfolio" }}
         imageSrc="/images/hero/web-design.png"
         imageAlt="UX designer working on website wireframes and layouts"
       />

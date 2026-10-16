@@ -1,20 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { HeroSection } from "@/components/hero-section";
 import { Button } from "@/components/ui/button";
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import {
-  Globe,
-  Code2,
-  Plug,
-  BarChart3,
-  Server,
   ArrowRight,
   Building2,
   GraduationCap,
@@ -26,52 +15,50 @@ import {
   Stethoscope,
   Network,
   CheckCircle2,
-  TrendingUp,
-  Activity,
 } from "lucide-react";
 
 const services = [
   {
-    icon: Globe,
     title: "Web Design & Development",
     description:
       "Beautiful, responsive websites that engage users and drive conversions.",
     href: "/services/web-design-development",
+    image: "/images/hero/web-design.png",
   },
   {
-    icon: Code2,
     title: "Custom Software Development",
     description:
       "Tailored software solutions designed to meet your unique business requirements.",
     href: "/services/custom-software",
+    image: "/images/hero/custom-software.png",
   },
   {
-    icon: Plug,
     title: "API & Integrations",
     description:
       "Seamless integration of systems and third-party services to streamline operations.",
     href: "/services/api-integrations",
+    image: "/images/hero/api-integrations.png",
   },
   {
-    icon: BarChart3,
     title: "Data Analytics",
     description:
       "Transform raw data into actionable insights that drive strategic decisions.",
     href: "/services/data-analytics",
+    image: "/images/hero/data-analytics.png",
   },
   {
-    icon: Server,
     title: "Web Hosting",
     description:
       "Reliable, secure, and scalable hosting solutions for your applications.",
     href: "/services/web-hosting",
+    image: "/images/hero/web-hosting.png",
   },
   {
-    icon: Network,
     title: "Network Infrastructure",
     description:
       "LAN, WAN, wireless, cabling, and security - we design, build, and support it all.",
     href: "/services/network-infrastructure",
+    image: "/images/hero/network-infrastructure.png",
   },
 ];
 
@@ -129,65 +116,15 @@ const features = [
 
 function HeroVisual() {
   return (
-    <div className="relative rounded-2xl border border-border bg-card p-4 shadow-xl shadow-primary/5">
-      {/* Top bar */}
-      <div className="flex items-center justify-between border-b border-border pb-3">
-        <div className="flex items-center gap-2">
-          <div className="flex h-7 w-7 items-center justify-center rounded-md bg-primary text-primary-foreground text-xs font-bold">
-            S
-          </div>
-          <span className="text-sm font-semibold text-foreground">
-            Spida Analytics
-          </span>
-        </div>
-        <div className="flex gap-1.5">
-          <span className="h-2.5 w-2.5 rounded-full bg-muted" />
-          <span className="h-2.5 w-2.5 rounded-full bg-muted" />
-          <span className="h-2.5 w-2.5 rounded-full bg-primary" />
-        </div>
-      </div>
-
-      {/* Metric cards */}
-      <div className="grid grid-cols-2 gap-3 py-4">
-        <div className="rounded-lg bg-secondary p-3">
-          <div className="flex items-center gap-2 text-muted-foreground text-xs">
-            <TrendingUp className="h-3.5 w-3.5 text-primary" />
-            Revenue
-          </div>
-          <p className="mt-1 text-xl font-bold text-foreground">$48.2k</p>
-          <p className="text-xs text-primary">+12.5%</p>
-        </div>
-        <div className="rounded-lg bg-secondary p-3">
-          <div className="flex items-center gap-2 text-muted-foreground text-xs">
-            <Activity className="h-3.5 w-3.5 text-primary" />
-            Active Users
-          </div>
-          <p className="mt-1 text-xl font-bold text-foreground">2,310</p>
-          <p className="text-xs text-primary">+4.1%</p>
-        </div>
-      </div>
-
-      {/* Chart */}
-      <div className="rounded-lg bg-secondary p-4">
-        <div className="flex items-end justify-between gap-2 h-28">
-          {[40, 65, 50, 80, 60, 95, 72].map((h, i) => (
-            <div
-              key={i}
-              className="flex-1 rounded-t bg-primary"
-              style={{ height: `${h}%`, opacity: 0.45 + h / 200 }}
-            />
-          ))}
-        </div>
-        <div className="mt-3 flex justify-between text-[10px] text-muted-foreground">
-          <span>Mon</span>
-          <span>Tue</span>
-          <span>Wed</span>
-          <span>Thu</span>
-          <span>Fri</span>
-          <span>Sat</span>
-          <span>Sun</span>
-        </div>
-      </div>
+    <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-xl shadow-primary/5">
+      <Image
+        src="/images/app-image.png"
+        alt="Spida-built operations dashboard"
+        width={2868}
+        height={1630}
+        priority
+        className="h-auto w-full"
+      />
     </div>
   );
 }
@@ -205,7 +142,7 @@ export default function HomePage() {
         title={title}
         description={desc}
         primaryAction={{ label: "Get Started", href: "/contact" }}
-        secondaryAction={{ label: "View Our Work", href: "/portfolio" }}
+        // secondaryAction={{ label: "View Our Work", href: "/portfolio" }}
         visual={<HeroVisual />}
       />
 
@@ -247,29 +184,35 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service) => (
-              <Card
+              <Link
                 key={service.href}
-                className="group hover:shadow-lg transition-all duration-300 border-border"
+                href={service.href}
+                className="group relative flex min-h-[26rem] flex-col items-center justify-end overflow-hidden rounded-2xl bg-foreground px-8 pb-10 text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
               >
-                <CardHeader>
-                  <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                    <service.icon className="h-6 w-6 text-primary" />
-                  </div>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
-                  <CardDescription className="text-muted-foreground">
-                    {service.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Link
-                    href={service.href}
-                    className="inline-flex items-center text-primary font-medium hover:underline"
-                  >
+                <Image
+                  src={service.image}
+                  alt=""
+                  fill
+                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div
+                  className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/55 to-black/10"
+                  aria-hidden="true"
+                />
+                <div className="relative">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-5 text-balance">
+                    {service.title}
+                  </h3>
+                  <span className="inline-flex items-center rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-primary transition-colors group-hover:bg-white/90">
                     Learn More
-                    <ArrowRight className="ml-1 h-4 w-4" />
-                  </Link>
-                </CardContent>
-              </Card>
+                    <ArrowRight className="ml-1.5 h-4 w-4" />
+                  </span>
+                  <p className="mt-5 text-white/85 leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -364,11 +307,13 @@ export default function HomePage() {
             <div className="relative">
               <div className="aspect-square bg-secondary rounded-2xl border border-border flex items-center justify-center">
                 <div className="text-center p-8">
-                  <div className="h-24 w-24 rounded-2xl bg-primary flex items-center justify-center mx-auto mb-6">
-                    <span className=" text-4xl font-bold text-primary-foreground">
-                      Spida
-                    </span>
-                  </div>
+                  <Image
+                    src="/images/logo/navy-logo.png"
+                    alt="Spida"
+                    width={1400}
+                    height={1400}
+                    className="h-32 w-32 rounded-2xl mx-auto mb-6"
+                  />
                   <p className=" text-2xl font-semibold text-foreground mb-2">
                     Innovation Driven
                   </p>
@@ -398,14 +343,14 @@ export default function HomePage() {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-            <Button
+            {/* <Button
               asChild
               size="lg"
               variant="outline"
               className="font-semibold border-background/30 bg-transparent text-background hover:bg-background hover:text-foreground"
             >
               <Link href="/portfolio">View Our Portfolio</Link>
-            </Button>
+            </Button> */}
           </div>
         </div>
       </section>

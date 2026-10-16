@@ -76,7 +76,7 @@ export default function APIIntegrationsPage() {
         title="API & Integrations"
         description="Connect your systems, automate workflows, and unlock the full potential of your technology stack with our expert API development and integration services."
         primaryAction={{ label: "Get Started", href: "/contact" }}
-        secondaryAction={{ label: "View Portfolio", href: "/portfolio" }}
+        // secondaryAction={{ label: "View Portfolio", href: "/portfolio" }}
         imageSrc="/images/hero/api-integrations.png"
         imageAlt="Data center servers with glowing network connectivity"
       />

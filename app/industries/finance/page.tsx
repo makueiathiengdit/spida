@@ -143,7 +143,7 @@ export default function FinancePage() {
         title="Finance & Banking"
         description="We build secure, compliant financial technology solutions that help banks, insurance companies, and fintech firms innovate while maintaining the highest security standards."
         primaryAction={{ label: "Get Started", href: "/contact" }}
-        secondaryAction={{ label: "View Our Work", href: "/portfolio" }}
+        // secondaryAction={{ label: "View Our Work", href: "/portfolio" }}
         imageSrc="/images/hero/finance.png"
         imageAlt="Modern financial district with a professional using a secure banking app"
       />

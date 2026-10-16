@@ -119,7 +119,7 @@ export default function NetworkInfrastructurePage() {
         title="Network Infrastructure"
         description="We do it all - LAN, WAN, wireless, cabling, and security. From a single office network to multi-site connectivity across the country, we design, build, and support networks that just work."
         primaryAction={{ label: "Start Your Project", href: "/contact" }}
-        secondaryAction={{ label: "View Our Work", href: "/portfolio" }}
+        // secondaryAction={{ label: "View Our Work", href: "/portfolio" }}
         imageSrc="/images/hero/network-infrastructure.png"
         imageAlt="Network topology diagram showing connected LAN and WAN nodes"
       />

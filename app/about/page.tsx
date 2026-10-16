@@ -111,7 +111,7 @@ export default function AboutPage() {
         title="Building Digital Excellence Since 2009"
         description="Spida is a leading software development company dedicated to helping businesses transform through technology. We combine technical expertise with industry knowledge to deliver solutions that drive real results."
         primaryAction={{ label: "Work With Us", href: "/contact" }}
-        secondaryAction={{ label: "View Portfolio", href: "/portfolio" }}
+        // secondaryAction={{ label: "View Portfolio", href: "/portfolio" }}
         imageSrc="/images/hero/about.png"
         imageAlt="Diverse software company team standing together in a modern office"
       />

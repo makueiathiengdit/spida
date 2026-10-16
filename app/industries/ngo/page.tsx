@@ -147,7 +147,7 @@ export default function NGOPage() {
         title="NGO & Non-Profit Organizations"
         description="We help non-profit organizations amplify their impact through technology. From donor management to volunteer coordination, we build solutions that support your mission."
         primaryAction={{ label: "Get Started", href: "/contact" }}
-        secondaryAction={{ label: "View Our Work", href: "/portfolio" }}
+        // secondaryAction={{ label: "View Our Work", href: "/portfolio" }}
         imageSrc="/images/hero/ngo.png"
         imageAlt="Volunteers collaborating at an outdoor charity event with digital tools"
       />

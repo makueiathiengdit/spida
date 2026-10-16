@@ -96,7 +96,7 @@ export default function ServicesPage() {
         title="Our Services"
         description="From web platforms to custom software, integrations, analytics, and hosting — Spida delivers the full stack of digital services businesses need to grow."
         primaryAction={{ label: "Start a Project", href: "/contact" }}
-        secondaryAction={{ label: "View Our Work", href: "/portfolio" }}
+        // secondaryAction={{ label: "View Our Work", href: "/portfolio" }}
         imageSrc="/images/hero/api-integrations.png"
         imageAlt="Developer working on API integrations"
       />
