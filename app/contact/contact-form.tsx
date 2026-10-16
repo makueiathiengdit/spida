@@ -1,14 +1,20 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { HeroSection } from "@/components/hero-section"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle2 } from "lucide-react"
+import { useState } from "react";
+import Link from "next/link";
+import { HeroSection } from "@/components/hero-section";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle2 } from "lucide-react";
 
 const contactInfo = [
   {
@@ -27,8 +33,8 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Office",
-    value: "123 Tech Street",
-    description: "Innovation City, IC 12345",
+    value: "Spida House",
+    description: "Juba, South Sudan",
   },
   {
     icon: Clock,
@@ -36,7 +42,7 @@ const contactInfo = [
     value: "9:00 AM - 6:00 PM",
     description: "Monday to Friday",
   },
-]
+];
 
 const services = [
   "Web Design & Development",
@@ -45,7 +51,7 @@ const services = [
   "Data Analytics",
   "Web Hosting",
   "Other",
-]
+];
 
 export function ContactForm() {
   const [formState, setFormState] = useState({
@@ -54,14 +60,14 @@ export function ContactForm() {
     company: "",
     service: "",
     message: "",
-  })
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  });
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // In a real app, this would send the form data to a backend
-    setIsSubmitted(true)
-  }
+    setIsSubmitted(true);
+  };
 
   return (
     <div>
@@ -80,10 +86,13 @@ export function ContactForm() {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Info */}
             <div>
-              <h2 className="text-2xl font-bold text-foreground mb-6">Get in Touch</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-6">
+                Get in Touch
+              </h2>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                Whether you have a project in mind, need technical consultation, or just want to
-                learn more about how we can help your business, we are here to assist you.
+                Whether you have a project in mind, need technical consultation,
+                or just want to learn more about how we can help your business,
+                we are here to assist you.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
@@ -93,9 +102,13 @@ export function ContactForm() {
                       <item.icon className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground">{item.title}</h3>
+                      <h3 className="font-semibold text-foreground">
+                        {item.title}
+                      </h3>
                       <p className="text-foreground">{item.value}</p>
-                      <p className="text-sm text-muted-foreground">{item.description}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {item.description}
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -108,7 +121,8 @@ export function ContactForm() {
                 <CardHeader>
                   <CardTitle>Send Us a Message</CardTitle>
                   <CardDescription>
-                    Fill out the form below and we will get back to you within 24 hours.
+                    Fill out the form below and we will get back to you within
+                    24 hours.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -117,11 +131,17 @@ export function ContactForm() {
                       <div className="h-16 w-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
                         <CheckCircle2 className="h-8 w-8 text-green-600" />
                       </div>
-                      <h3 className="text-xl font-semibold text-foreground mb-2">Thank You!</h3>
+                      <h3 className="text-xl font-semibold text-foreground mb-2">
+                        Thank You!
+                      </h3>
                       <p className="text-muted-foreground mb-4">
-                        Your message has been sent successfully. We will get back to you soon.
+                        Your message has been sent successfully. We will get
+                        back to you soon.
                       </p>
-                      <Button onClick={() => setIsSubmitted(false)} variant="outline">
+                      <Button
+                        onClick={() => setIsSubmitted(false)}
+                        variant="outline"
+                      >
                         Send Another Message
                       </Button>
                     </div>
@@ -135,7 +155,12 @@ export function ContactForm() {
                             placeholder="John Smith"
                             required
                             value={formState.name}
-                            onChange={(e) => setFormState({ ...formState, name: e.target.value })}
+                            onChange={(e) =>
+                              setFormState({
+                                ...formState,
+                                name: e.target.value,
+                              })
+                            }
                           />
                         </div>
                         <div className="space-y-2">
@@ -146,7 +171,12 @@ export function ContactForm() {
                             placeholder="john@company.com"
                             required
                             value={formState.email}
-                            onChange={(e) => setFormState({ ...formState, email: e.target.value })}
+                            onChange={(e) =>
+                              setFormState({
+                                ...formState,
+                                email: e.target.value,
+                              })
+                            }
                           />
                         </div>
                       </div>
@@ -158,7 +188,12 @@ export function ContactForm() {
                             id="company"
                             placeholder="Your Company"
                             value={formState.company}
-                            onChange={(e) => setFormState({ ...formState, company: e.target.value })}
+                            onChange={(e) =>
+                              setFormState({
+                                ...formState,
+                                company: e.target.value,
+                              })
+                            }
                           />
                         </div>
                         <div className="space-y-2">
@@ -167,7 +202,12 @@ export function ContactForm() {
                             id="service"
                             className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                             value={formState.service}
-                            onChange={(e) => setFormState({ ...formState, service: e.target.value })}
+                            onChange={(e) =>
+                              setFormState({
+                                ...formState,
+                                service: e.target.value,
+                              })
+                            }
                           >
                             <option value="">Select a service</option>
                             {services.map((service) => (
@@ -187,7 +227,12 @@ export function ContactForm() {
                           rows={5}
                           required
                           value={formState.message}
-                          onChange={(e) => setFormState({ ...formState, message: e.target.value })}
+                          onChange={(e) =>
+                            setFormState({
+                              ...formState,
+                              message: e.target.value,
+                            })
+                          }
                         />
                       </div>
 
@@ -216,11 +261,23 @@ export function ContactForm() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left max-w-5xl mx-auto">
             {[
-              { q: "What is your typical project timeline?", a: "Project timelines vary based on scope, but typically range from 4-16 weeks." },
-              { q: "Do you provide ongoing support?", a: "Yes, we offer maintenance and support packages for all our projects." },
-              { q: "How do you handle project pricing?", a: "We provide detailed quotes after understanding your requirements through a consultation." },
+              {
+                q: "What is your typical project timeline?",
+                a: "Project timelines vary based on scope, but typically range from 4-16 weeks.",
+              },
+              {
+                q: "Do you provide ongoing support?",
+                a: "Yes, we offer maintenance and support packages for all our projects.",
+              },
+              {
+                q: "How do you handle project pricing?",
+                a: "We provide detailed quotes after understanding your requirements through a consultation.",
+              },
             ].map((faq, index) => (
-              <div key={index} className="bg-card rounded-xl p-6 border border-border/50">
+              <div
+                key={index}
+                className="bg-card rounded-xl p-6 border border-border/50"
+              >
                 <h3 className="font-semibold text-foreground mb-2">{faq.q}</h3>
                 <p className="text-muted-foreground text-sm">{faq.a}</p>
               </div>
@@ -229,5 +286,5 @@ export function ContactForm() {
         </div>
       </section>
     </div>
-  )
+  );
 }
